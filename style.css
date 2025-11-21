@@ -1,0 +1,151 @@
+/* Step 3: Style the body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.skip {
+    position: absolute;
+    top: 10px;      /* hidden above screen */
+    left: 10px;
+    background: #fff;
+    color: #000;
+    padding: 8px 12px;
+    border: 2px solid #000;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 10000;  /* make sure header/nav can’t cover it */
+}
+
+.skip:focus {
+    top: 10px;        /* <-- moves it into view on keyboard focus */
+}
+
+/* Step 4: Style the header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Step 5: Style the navigation bar */
+nav {
+    background-color: #333;
+    color: white;
+
+    /* REQUIRED CHANGES */
+    display: inline-block;
+    width: 80%;
+    padding: 10px;
+}
+
+/* Style ONLY the image inside nav (descendant selector requirement) */
+nav img {
+    width: 10%;
+    position: relative;
+}
+
+/* Comment out the original LI styling (Homework requirement) */
+/*
+nav li {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0 10px;
+}
+*/
+
+/* Replace with simpler list styling */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav li {
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Step 6: Style the main content area */
+main {
+    background-color: #ffffff;
+    font-size: 18px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Step 7: Style the footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Step 8: Style headings */
+h1 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+
+/* Step 10: Style paragraphs */
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ------------------------- */
+/*      HOMEWORK TWO         */
+/*  FLEX AND GRID LAYOUTS    */
+/* ------------------------- */
+
+/* FLEX LAYOUT (Neighborhood Page) */
+.flex {
+    display: flex;
+    flex-wrap: wrap;           /* REQUIRED */
+    justify-content: center;   /* adjust if needed */
+    gap: 20px;
+}
+
+.flex img {
+    width: 150px;              /* adjust for preferred size */
+    border-radius: 5px;
+}
+
+/* GRID LAYOUT (Parks Page) */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;   /* REQUIRED */
+    justify-content: center;          /* center the columns */
+    align-items: start;               /* adjust if needed */
+    row-gap: 25px;                    /* spacing between rows */
+    column-gap: 20px;
+}
+
+/* Only images inside .grid (REQUIRED DESCENDANT SELECTOR) */
+.grid img {
+    width: 100%;               /* REQUIRED */
+    border-radius: 5px;
+}
+
